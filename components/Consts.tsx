@@ -12,6 +12,7 @@ import {
     SiMaterialui,
     SiNextdotjs,
     SiPostgresql,
+    SiTailwindcss,
     SiTypescript,
     SiExpress,
     SiSequelize,
@@ -22,8 +23,8 @@ export const aboutMe: string[] = [
     "Graduado del Bootcamp de Soy Henry.",
     "Amante de la programación, disfruto mucho trabajar en equipo.",
     "Puedo aportar soluciones óptimas en poco tiempo.",
-    "Me encuentro reforzando conocimientos en Next.js, TypeCript.",
-    "Estoy abierto a la relocalización.",
+    "Me encuentro reforzando conocimientos en Next.js, TypeScript.",
+    "Mi meta para 2023 es aprender Angular.",
 ]
 
 interface Tech {
@@ -36,16 +37,16 @@ export const techs: Tech[] = [
     { name: "HTML 5", icon: <SiHtml5 />, url: "https://developer.mozilla.org/es/docs/Web/HTML" },
     { name: "CSS 3", icon: <SiCss3 />, url: "https://developer.mozilla.org/es/docs/Web/CSS" },
     { name: "JavaScript", icon: <SiJavascript />, url: "https://developer.mozilla.org/es/docs/Web/JavaScript" },
-    { name: "TypeScript", icon: <SiTypescript />, url: "https://www.typescriptlang.org/" },
     { name: "React js", icon: <SiReact />, url: "https://reactjs.org/" },
     { name: "Redux js", icon: <SiRedux />, url: "https://redux.js.org/" },
-    { name: "Material UI", icon: <SiMaterialui />, url: "https://mui.com/" },
+    { name: "Tailwind css", icon: <SiTailwindcss />, url: "https://tailwindcss.com/" },
+    { name: "TypeScript", icon: <SiTypescript />, url: "https://www.typescriptlang.org/" },
     { name: "Next js", icon: <SiNextdotjs />, url: "https://nextjs.org/" },
+    { name: "Material UI", icon: <SiMaterialui />, url: "https://mui.com/" },
     { name: "Node js", icon: <SiNodedotjs />, url: "https://nodejs.org/" },
     { name: "Express js", icon: <SiExpress />, url: "https://expressjs.com/" },
     { name: "PostgreSQL", icon: <SiPostgresql />, url: "https://www.postgresql.org/" },
     { name: "Sequelize", icon: <SiSequelize />, url: "https://sequelize.org/" },
-    // { name: "Git", icon: <SiGit />, url: "https://git-scm.com/" },
 ]
 
 interface Project {
@@ -63,8 +64,8 @@ export const myProjects: Project[] = [
         description: "Portafolio de proyectos personal en el cual puedes ver mis trabajos y proyectos en los cuales he trabajado, fue desarrollado con tecnologías que fui aprendiendo y reforzando a la par.",
         image: "/portfolio2.png",
         lenguages: ["React.js", "Next.js", "TypeScript", "Material UI"],
-        demo: "",
-        github: "",
+        demo: "https://ibrahimcardozo.vercel.app/",
+        github: "https://github.com/ibracardozo7/portfolio2.0-next-ts-mui",
     },
     {
         title: "Gestios de Negocio: Liberfit gym",
@@ -83,6 +84,14 @@ export const myProjects: Project[] = [
         github: "https://github.com/ibracardozo7/PI-Dogs-main",
     },
     {
+        title: "Proyecto : Ta-Te-ti || tres en rayas",
+        description: "Aplicación creada con React.js, donde realizamos un juego tradicional en el cual aprendi logicas de javascript.",
+        image: "/tateti.png",
+        lenguages: ["React.js", "JavaScript", "CSS"] ,
+        demo: "https://ta-te-ti-ibra7.vercel.app/",
+        github: "https://github.com/ibracardozo7/ta-te-ti-react.js",
+    },
+    {
         title: "Proyecto Individual: Pokemons App",
         description: "Aplicación creada con React.js, Redux para el Frontend. Esta aplicación consume datos de una base de datos que fueron cargados desde una API a través de un Backend creado con Express. Y sirve para buscar y mostrar datos de algún Pokémon y poder crear.",
         image: "/pokemon.png",
@@ -99,8 +108,8 @@ interface Network {
 }
 
 export const networks: Network[] = [
-    { name: "Github", icon: <SiGithub />, url: "" },
-    { name: "Linked In", icon: <SiLinkedin />, url: "" },
-    { name: "Whatsapp", icon: <SiWhatsapp />, url: "" },
-    { name: "Instagram", icon: <SiInstagram />, url: "" },
+    { name: "Github", icon: <SiGithub />, url: "https://github.com/ibracardozo7" },
+    { name: "Linked In", icon: <SiLinkedin />, url: "https://www.linkedin.com/in/ibrahim-cardozo/" },
+    { name: "Whatsapp", icon: <SiWhatsapp />, url: "http://wa.me/5493884702649" },
+    { name: "Instagram", icon: <SiInstagram />, url: "https://www.instagram.com/ibracardozo7" },
 ]

@@ -101,7 +101,7 @@ const NavBar = (props: NavProps) => {
                                                 <Link href={elem.link} key={elem.name}>
                                                     <Button
                                                         variant="text"
-                                                        color={mode
+                                                        color={ mode
                                                             ? "secondary"
                                                             : "inherit"}>
                                                         {elem.name}
