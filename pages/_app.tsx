@@ -1,16 +1,27 @@
+import * as React from "react"
+import "../styles/global.css"
 import Head from 'next/head'
+import { AppProps } from "next/app"
+import { ThemeProvider } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
+import { CacheProvider, EmotionCache } from "@emotion/react"
+import createEmotionCache from "../src/createEmotionCache"
 import Footer from "../components/Layout/Footer"
 import NavBar from "../components/Layout/Navbar"
 import Particles from "../components/Particles"
 import useMode from "../hooks/useMode"
-import { ThemeProvider } from '@mui/material/styles'
-import { CssBaseline } from '@mui/material'
 
-const App = ({ Component, pageProps }) => {
+const clientSideEmotionCache = createEmotionCache();
+interface MyAppProps extends AppProps {
+  emotionCache?: EmotionCache;
+}
+
+const App = (props: MyAppProps) => {
   
   const { theme, mode, toggleMode} = useMode()
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   return (
-    <>
+    <CacheProvider value={emotionCache}>
     <Head>
       <title>Xavier Ibrahim Cardozo | Full Stack Web Developer</title>
       <meta name="viewport" content="initial-scale=1, width=device-width" />
@@ -29,7 +40,7 @@ const App = ({ Component, pageProps }) => {
       <Component {...pageProps} />
       <Footer />
     </ThemeProvider>
-    </>
+    </CacheProvider>
   ) 
 }
 

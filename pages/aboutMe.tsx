@@ -100,7 +100,7 @@ const AboutMe = () => {
                             xs={12}
                             md={9}
                             spacing={3}
-                            justifyContent="">
+                            justifyContent="center">
                             {
                             techs.map((elem) => (
                                 <Grid key={elem.name} item>

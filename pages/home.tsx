@@ -22,7 +22,8 @@ const Home = () => {
                         sx={{
                             display: "flex",
                             alignItems: "center",
-                            py: 20
+                            py: 20,
+                            // justifyContent: "center"
                         }}>
                             <Title
                             size={2}
@@ -38,7 +39,9 @@ const Home = () => {
                             container
                             xs={12}
                             md={3}
-                            spacing={2}>
+                            spacing={2}
+                            // justifyContent="center"
+                            >
                             <Grid item xs={12}
                                 sx={{ display: 'flex', alignItems: 'flex-end' }}>
                                 <Link href="#portfolio">

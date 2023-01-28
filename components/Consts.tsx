@@ -24,7 +24,7 @@ export const aboutMe: string[] = [
     "Amante de la programación, disfruto mucho trabajar en equipo.",
     "Puedo aportar soluciones óptimas en poco tiempo.",
     "Me encuentro reforzando conocimientos en Next.js, TypeScript.",
-    "Mi meta para 2023 es aprender Angular.",
+    "Mi meta para este 2023 es aprender Angular.",
 ]
 
 interface Tech {
