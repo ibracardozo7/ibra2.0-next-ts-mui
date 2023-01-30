@@ -80,7 +80,7 @@ export const myProjects: Project[] = [
         description: "Aplicación creada con React.js, Redux y CSS en la cual puedes buscar razas de perros que estén disponibles en la API, ver sus detalles e imágenes, filtrarlos por tipo de razas y ordenarlos de distintas maneras.",
         image: "/dog.png",
         lenguages: ["React.js", "Redux.js", "CSS", "Node.js", "Express.js", "Sequelize", "PostgreSQL"],
-        demo: "",
+        demo: "https://ibracardozo-pi-dogs.vercel.app/",
         github: "https://github.com/ibracardozo7/PI-Dogs-main",
     },
     {
