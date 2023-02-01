@@ -30,7 +30,6 @@ const App = (props: MyAppProps) => {
       <meta content="portfolio" name="keywords" />
       <meta content="Xavier Ibra Cardozo" name="author" />
       <link href="/i.png" rel="icon" />
-      <meta key="ogimage" content="https://pngimg.com/uploads/letter_j/letter_j_PNG51.png" property="og:image" />
     </Head>
     {/* body */}
     <ThemeProvider theme={theme}>
