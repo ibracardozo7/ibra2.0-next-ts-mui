@@ -83,14 +83,14 @@ export const myProjects: Project[] = [
         demo: "https://ibracardozo-pi-dogs.vercel.app/",
         github: "https://github.com/ibracardozo7/PI-Dogs-main",
     },
-    {
-        title: "Proyecto : Ta-Te-ti || tres en rayas",
-        description: "Aplicación creada con React.js, donde realizamos un juego tradicional en el cual aprendi logicas de javascript.",
-        image: "/tateti.png",
-        lenguages: ["React.js", "JavaScript", "CSS"] ,
-        demo: "https://ta-te-ti-ibra7.vercel.app/",
-        github: "https://github.com/ibracardozo7/ta-te-ti-react.js",
-    },
+    // {
+    //     title: "Proyecto : Ta-Te-ti || tres en rayas",
+    //     description: "Aplicación creada con React.js, donde realizamos un juego tradicional en el cual aprendi logicas de javascript.",
+    //     image: "/tateti.png",
+    //     lenguages: ["React.js", "JavaScript", "CSS"] ,
+    //     demo: "https://ta-te-ti-ibra7.vercel.app/",
+    //     github: "https://github.com/ibracardozo7/ta-te-ti-react.js",
+    // },
     {
         title: "Proyecto Individual: Pokemons App",
         description: "Aplicación creada con React.js, Redux para el Frontend. Esta aplicación consume datos de una base de datos que fueron cargados desde una API a través de un Backend creado con Express. Y sirve para buscar y mostrar datos de algún Pokémon y poder crear.",
