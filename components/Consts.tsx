@@ -60,6 +60,14 @@ interface Project {
 
 export const myProjects: Project[] = [
     {
+        title: "Admin dashboard app",
+        description: "Proximamente estará terminado un mini proyecto de un dashboard con sus determinadas funciones, Un app creado con libreria de componentes de visulizacion de datos y calendario",
+        image: "/react.png",
+        lenguages: ["React.js", "Material UI"],
+        demo: "",
+        github: "",
+    },
+    {
         title: "Portafolio",
         description: "Portafolio de proyectos personal en el cual puedes ver mis trabajos y proyectos en los cuales he trabajado, fue desarrollado con tecnologías que fui aprendiendo y reforzando a la par.",
         image: "/portfolio2.png",
