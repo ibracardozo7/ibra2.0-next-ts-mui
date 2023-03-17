@@ -1,12 +1,13 @@
-import { Box, Button, IconButton, CardMedia, Container, Grid, useTheme } from "@mui/material"
+import { Box, Button, IconButton, CardMedia, Container, Grid, useTheme, useMediaQuery } from "@mui/material"
 import Title from "../components/Title"
 import Link from "next/link"
 import { networks } from "../components/Consts"
 
 const Home = () => {
 
-    const { palette } = useTheme()
+    const { palette, breakpoints } = useTheme()
     const { primary, secondary } = palette
+    const isMobile = useMediaQuery(breakpoints.down("md"));
     const mode = palette.mode === "dark"
 
     return (
@@ -19,6 +20,33 @@ const Home = () => {
                 }}
                 maxWidth="md">
                 <Grid container>
+                    {isMobile && (
+                        <Grid item xs={12} md={4}
+                        spacing={2}
+                        justifyContent="center"
+                        alignItems="center"
+                            sx={{ display: "flex",}}>
+                                <CardMedia image="/ibra.jpeg"
+                                    component="img"
+                                    alt=""
+                                    sx={{
+                                        width: {
+                                            xs: "70%",
+                                            sm: "40%",
+                                            md: "90%",
+                                        },
+                                        objectFit: "cover",
+                                        zIndex: 2,
+                                        borderRadius: "50%",
+                                        border: `2px solid ${mode ? "cyan" : "#607d8b"}`,
+                                        boxShadow: `0px 0px 50px 2px ${mode ? secondary.dark : primary.dark}`,
+                                        marginBottom: {
+                                            xs: "-250px",
+                                            md: "-50px"
+                                        }
+                                    }} />
+                        </Grid>
+                    )}
                     <Grid
                         item
                         xs={12}
@@ -85,33 +113,34 @@ const Home = () => {
                                 </Button>
                             </Link>
                         </Grid>
-                            <Grid item xs={12} md={4}
-                            spacing={2}
-                            justifyContent="center"
-                            alignItems="center"
-                                sx={{ display: "flex",}}>
-                                    <CardMedia image="/ibra.jpeg"
-                                        component="img"
-                                        alt=""
-                                        sx={{
-                                            width: {
-                                                xs: "80%",
-                                                sm: "40%",
-                                                md: "90%",
-                                            },
-                                            objectFit: "cover",
-                                            zIndex: 2,
-                                            borderRadius: "50%",
-                                            border: `2px solid ${mode ? "cyan" : "#607d8b"}`,
-                                            boxShadow: `0px 0px 50px 2px ${mode ? secondary.dark : primary.dark}`,
-                                            marginBottom: {
-                                                xs: "50px",
-                                                md: "-50px"
-                                            }
-                                        }} />
-                            </Grid>
+                        {!isMobile && (
+                        <Grid item xs={12} md={4}
+                        spacing={2}
+                        justifyContent="center"
+                        alignItems="center"
+                        sx={{ display: "flex",}}>
+                            <CardMedia image="/ibra.jpeg"
+                                component="img"
+                                alt=""
+                                sx={{
+                                    width: {
+                                        xs: "80%",
+                                        sm: "40%",
+                                        md: "90%",
+                                    },
+                                    objectFit: "cover",
+                                    zIndex: 2,
+                                    borderRadius: "50%",
+                                    border: `2px solid ${mode ? "cyan" : "#607d8b"}`,
+                                    boxShadow: `0px 0px 50px 2px ${mode ? secondary.dark : primary.dark}`,
+                                    marginBottom: {
+                                        xs: "50px",
+                                        md: "-50px"
+                                    }
+                                }} />
                         </Grid>
-                
+                        )}
+                    </Grid>
             </Container>
         </Box>
     )
