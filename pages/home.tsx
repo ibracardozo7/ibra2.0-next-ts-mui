@@ -39,7 +39,7 @@ const Home = () => {
                                         zIndex: 2,
                                         borderRadius: "50%",
                                         border: `2px solid ${mode ? "cyan" : "#607d8b"}`,
-                                        boxShadow: `0px 0px 50px 2px ${mode ? secondary.dark : primary.dark}`,
+                                        boxShadow: `0px 0px 40px 2px ${mode ? secondary.dark : primary.dark}`,
                                         marginBottom: {
                                             xs: "-250px",
                                             md: "-50px"
@@ -47,6 +47,7 @@ const Home = () => {
                                     }} />
                         </Grid>
                     )}
+
                     <Grid
                         item
                         xs={12}
@@ -99,7 +100,10 @@ const Home = () => {
                             <Link href="#portfolio">
                                 <Button
                                     sx={{
-                                        mt: "15px",
+                                        mt: {
+                                            xs: "25px",
+                                            md: "15px"
+                                        },
                                         p: "1rem 2.8rem",
                                         // width: "40%",
                                         borderRadius:"4rem",
@@ -113,6 +117,7 @@ const Home = () => {
                                 </Button>
                             </Link>
                         </Grid>
+
                         {!isMobile && (
                         <Grid item xs={12} md={4}
                         spacing={2}
