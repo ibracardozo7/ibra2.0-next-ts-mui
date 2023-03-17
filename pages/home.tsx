@@ -1,28 +1,37 @@
-import { Box, Button, Card, CardMedia, Container, Grid, useTheme } from "@mui/material"
+import { Box, Button, IconButton, CardMedia, Container, Grid, useTheme } from "@mui/material"
 import Title from "../components/Title"
 import Link from "next/link"
+import { networks } from "../components/Consts"
 
 const Home = () => {
 
     const { palette } = useTheme()
+    const { primary, secondary } = palette
+    const mode = palette.mode === "dark"
 
     return (
         <Box component="section" id="home">
             <Container
                 sx={{
                     minHeight: "100vh",
-                    display: "flex"
+                    display: "flex",
+                    // border: "1px solid black"
                 }}
                 maxWidth="md">
                 <Grid container>
                     <Grid
                         item
                         xs={12}
-                        md={9}
+                        md={8}
                         sx={{
                             display: "flex",
-                            alignItems: "center",
-                            py: 20,
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            marginTop: {
+                                xs: "75px",
+                                md:"0px"
+                            }
+                            // py: 20,
                             // justifyContent: "center"
                         }}>
                             <Title
@@ -33,17 +42,54 @@ const Home = () => {
                                 "y soy un ",
                                 "Full Stack Developer",]}
                             />
-                        </Grid>
-                        <Grid 
-                            item
-                            container
-                            xs={12}
-                            md={3}
-                            spacing={2}
-                            // justifyContent="center"
+                            <Box
+                                display="flex"
+                                gap="10px"
+                                my="10px"
                             >
-                            <Grid item xs={12}
-                                sx={{ display: "flex", alignItems: 'flex-end', justifyContent: "center"}}>
+                            {
+                                networks.map(elem => {
+                                    return (
+                                        <Link
+                                            key={elem.name}
+                                            href={elem.url}
+                                            target="_blank"
+                                            title={elem.name}>
+                                            <IconButton
+                                                sx={{
+                                                    border: `.15rem solid ${mode ? "cyan" : "#607d8b"}`,
+                                                    p:"10px"}}
+                                                size="medium"
+                                                color={mode ? "secondary" : "primary"}>
+                                                {elem.icon}
+                                            </IconButton>
+                                        </Link>
+                                    )
+                                })
+                                }
+                            </Box>
+                            <Link href="#portfolio">
+                                <Button
+                                    sx={{
+                                        mt: "15px",
+                                        p: "1rem 2.8rem",
+                                        // width: "40%",
+                                        borderRadius:"4rem",
+                                        boxShadow: `0 0 .8rem ${mode ? "cyan" : "#607d8b"}`,
+                                        transition: ".8s ease"
+                                    }}
+                                    color={palette.mode !== 'dark'
+                                    ? "primary" : "secondary"}
+                                    variant="contained">
+                                    Ver portafolio
+                                </Button>
+                            </Link>
+                        </Grid>
+                            <Grid item xs={12} md={4}
+                            spacing={2}
+                            justifyContent="center"
+                            alignItems="center"
+                                sx={{ display: "flex",}}>
                                     <CardMedia image="/ibra.jpeg"
                                         component="img"
                                         alt=""
@@ -51,45 +97,21 @@ const Home = () => {
                                             width: {
                                                 xs: "80%",
                                                 sm: "40%",
-                                                md: "100%",
+                                                md: "90%",
                                             },
                                             objectFit: "cover",
                                             zIndex: 2,
                                             borderRadius: "50%",
-                                            border: "3.5px solid cyan",
+                                            border: `2px solid ${mode ? "cyan" : "#607d8b"}`,
+                                            boxShadow: `0px 0px 50px 2px ${mode ? secondary.dark : primary.dark}`,
                                             marginBottom: {
                                                 xs: "50px",
                                                 md: "-50px"
                                             }
                                         }} />
                             </Grid>
-                            <Grid container item xs={12} spacing={2} >
-                                <Grid item xs={12}
-                                    sx={{ display: 'flex', alignItems: 'flex-end', justifyContent: "center" }}>
-                                        <Link href="#portfolio">
-                                        <Button
-                                            fullWidth
-                                            color={palette.mode !== 'dark'
-                                            ? "primary" : "secondary"}
-                                            variant="contained">
-                                            Ver portafolio
-                                        </Button>
-                                    </Link>
-                                </Grid>
-                                <Grid item xs={12} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: "center" }}>
-                                    <Link href="#contactme">
-                                        <Button
-                                            fullWidth
-                                            color={palette.mode !== 'dark'
-                                                ? "primary" : "secondary"}
-                                            variant="outlined">
-                                            Ver contactos
-                                        </Button>
-                                    </Link>
-                                </Grid>
-                            </Grid>
                         </Grid>
-                </Grid>
+                
             </Container>
         </Box>
     )

@@ -16,6 +16,9 @@ const useMode = () => {
             error: {
                 main: colorBar
             },
+            background: {
+                default: mode ? "#1f242d" : "#fff"
+            }
         },
         breakpoints: {
             values: {

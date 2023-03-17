@@ -59,7 +59,7 @@ const NavBar = (props: NavProps) => {
     }
 
     const Routes = [
-        { name: "INICIO", link: "/#", icon: <Home /> },
+        { name: "Inicio", link: "/#", icon: <Home /> },
         { name: "ACERCA DE MI", link: "/#about", icon: <AccountBox /> },
         { name: "PORTAFOLIO", link: "/#portfolio", icon: <Work /> },
         { name: "CONTACTO", link: "/#contactme", icon: <Email /> },
@@ -68,7 +68,7 @@ const NavBar = (props: NavProps) => {
     return (
         <Box component="section">
             <HideOnScroll>
-                <AppBar elevation={0}>
+                <AppBar elevation={0} sx={{backgroundColor: mode ? "#1f242d" : ""}}>
                     <Container maxWidth="lg">
                         <Toolbar disableGutters sx={{display: "flex", justifyContent: "space-between"}} >
                             <Typography sx={{display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700}} component="span">
@@ -91,9 +91,7 @@ const NavBar = (props: NavProps) => {
                                         onClick={handleDrawerToggle}>
                                         <MenuIcon
                                             fontSize="large"
-                                            sx={{color: mode
-                                                ? secondary.main
-                                                : primary.contrastText}} />
+                                            sx={{color: primary.contrastText}} />
                                     </IconButton>
                                     : <>
                                         {

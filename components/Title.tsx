@@ -14,10 +14,11 @@ const Title = ({ title, size, left}: Props) => {
 
     const CustomTitle = styled(Typography)<TypographyProps>(() => ({
         color: mode ? secondary.main : primary.main,
-        textShadow: `0px 0px 5px ${mode ? secondary.main : primary.light},
-        0px 0px 10px ${mode ? secondary.main : primary.light},
-        0px 0px 20px ${mode ? secondary.main : primary.light}`,
+        textShadow: `0px 0px 0px ${mode ? secondary.main : primary.light},
+        0px 0px 0px ${mode ? secondary.main : primary.light},
+        0px 0px 10px ${mode ? secondary.main : primary.light}`,
         fontSize: `${size}rem`,
+        fontWeight:"bold"
     }))
     if (typeof title === "string") {
         return (
