@@ -20,10 +20,12 @@ const ContactMe = () => {
                     direction="column"
                     spacing={4}>
                     <Grid item>
-                        <Title title="Contactame" size={2.5} />
+                        <Title title="Contactame!" size={2.5} />
                     </Grid>
                     <Grid item>
-                        <Card>
+                        <Card
+                        sx={{backgroundColor: mode ? "#323946": "#f2f0f0"}}
+                        >
                             <CardContent>
                                 <Typography textAlign="center">
                                 Puedes encontrarme en mis otras redes:

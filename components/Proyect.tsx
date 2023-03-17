@@ -21,11 +21,12 @@ const Proyect = ({
 }: Project) => {
 
     const { palette } = useTheme();
+    const mode = palette.mode === "dark"
     // const cardDirection = direction ? "row"
 
     return (
         <Card
-            elevation={4}
+            
             sx={{
                 display: "flex",
                 height: "100%",
@@ -34,7 +35,8 @@ const Proyect = ({
                     xs: "column",
                     sm: "",
                     md: "column"
-                }
+                },
+                backgroundColor: mode ? "#323946": "#f2f0f0",
             }}>
             <CardMedia
                 image={image}
@@ -79,7 +81,7 @@ const Proyect = ({
                     container
                     item
                     xs={7}
-                    md={9}
+                    md={8.5}
                     spacing={1}
                     >
                         {
@@ -103,7 +105,7 @@ const Proyect = ({
                         container
                         item
                         xs={5}
-                        md={3}
+                        md={3.5}
                         direction="column"
                         spacing={2}>
                         <Grid item>

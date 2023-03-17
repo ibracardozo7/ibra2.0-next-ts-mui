@@ -17,14 +17,16 @@ import {
     SiExpress,
     SiSequelize,
 } from 'react-icons/si';
+import { FaLinkedinIn } from "react-icons/fa"
 
 export const aboutMe: string[] = [
-    "Desarrollador Full Stack residente en Jujuy - Argentina.",
-    "Graduado del Bootcamp de Soy Henry.",
-    "Amante de la programación, disfruto mucho trabajar en equipo.",
-    "Puedo aportar soluciones óptimas en poco tiempo.",
-    "Me encuentro reforzando conocimientos en Next.js, TypeScript.",
-    "Mi meta para este 2023 es aprender Angular.",
+    "Desarrollador Full Stack ubicado en Jujuy - Argentina.",
+    "Tengo una gran pasion por los efectos de interfaz de usuario.",
+    "Disfruto mucho trabajar en equipo.",
+    "Persona bien organizada, solucionador de problemas.",
+    "Me encuentro reforzando conocimientos en Next.js, TypeScript, Angular.",
+    "Actualmente estoy buscando oportunidades.",
+    "Continuar aprendiendo y creciendo como desarrollador."
 ]
 
 interface Tech {
@@ -61,11 +63,11 @@ interface Project {
 export const myProjects: Project[] = [
     {
         title: "Admin dashboard app",
-        description: "Proximamente estará terminado un mini proyecto de un dashboard con sus determinadas funciones, Una app creado con libreria de componentes de visulizacion de datos y calendario",
-        image: "/react.png",
-        lenguages: ["React.js", "Material UI"],
-        demo: "",
-        github: "",
+        description: "Proximamente estará terminado un mini proyecto de un dashboard con sus determinadas funciones, Una app creado con libreria de componentes de visulizacion de datos y calendario.",
+        image: "/dashboard.png",
+        lenguages: ["React.js", "Material UI", "@nivo.rock", "@fullCalendar"],
+        demo: "https://ibra-dashboard.vercel.app/",
+        github: "https://github.com/ibracardozo7/admin-react.js-mui",
     },
     {
         title: "Portafolio",
@@ -117,7 +119,7 @@ interface Network {
 
 export const networks: Network[] = [
     { name: "Github", icon: <SiGithub />, url: "https://github.com/ibracardozo7" },
-    { name: "Linked In", icon: <SiLinkedin />, url: "https://www.linkedin.com/in/ibrahim-cardozo/" },
+    { name: "Linked In", icon: <FaLinkedinIn />, url: "https://www.linkedin.com/in/ibrahim-cardozo/" },
     { name: "Whatsapp", icon: <SiWhatsapp />, url: "http://wa.me/5493884702649" },
     { name: "Instagram", icon: <SiInstagram />, url: "https://www.instagram.com/ibracardozo7" },
 ]

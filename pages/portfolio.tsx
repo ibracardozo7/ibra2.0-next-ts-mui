@@ -25,7 +25,7 @@ const Portfolio = () => {
                     spacing={5}
                     >
                     <Grid item xs={12}>
-                        <Title title="Portfolio" size={2.5} />
+                        <Title title="Portafolio" size={2.5} />
                     </Grid>
                     <Grid
                         container

@@ -39,7 +39,7 @@ const AboutMe = () => {
                         <Grid
                             item
                             xs={12}
-                            md={3}
+                            md={4}
                             alignItems="center">
                             <Title title="Acerca de mi" size={2.5} />
                         </Grid>
@@ -47,7 +47,7 @@ const AboutMe = () => {
                             container
                             item
                             xs={12}
-                            md={9}
+                            md={8}
                             spacing={2}
                             justifyContent="center">
                             <List disablePadding>
@@ -72,12 +72,16 @@ const AboutMe = () => {
                                     />
                                     </ListItemIcon>
                                     <Button 
-                                        fullWidth
                                         href="/cv.pdf"
                                         target="_blank"
                                         color={mode ? 'secondary' : 'primary'}
                                         size="large"
-                                        variant="outlined"
+                                        variant="contained"
+                                        sx={{p: ".5rem 2rem",
+                                            borderRadius:"4rem",
+                                            boxShadow: `0 0 .8rem ${mode ? "cyan" : "#607d8b"}`,
+                                            transition: ".8s ease",
+                                        }}
                                         endIcon={<Description />}>
                                         Descargar CV
                                     </Button>
@@ -90,7 +94,7 @@ const AboutMe = () => {
                         <Grid
                             item
                             xs={12}
-                            md={3}
+                            md={4}
                             alignItems="center">
                             <Title title="Habilidades" size={2.5} />
                         </Grid>
@@ -98,7 +102,7 @@ const AboutMe = () => {
                             container
                             item
                             xs={12}
-                            md={9}
+                            md={8}
                             spacing={3}
                             justifyContent="center">
                             {

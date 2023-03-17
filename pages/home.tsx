@@ -37,7 +37,7 @@ const Home = () => {
                             // justifyContent: "center"
                         }}>
                             <Title
-                            size={2}
+                            size={2.1}
                             title={[
                                 "Hola! Mi nombre es ",
                                 "Xavier Ibrahim Cardozo",
@@ -51,13 +51,13 @@ const Home = () => {
                             >
                                 <Grid item
                                     xs={12}
-                                    md={2.8}
+                                    md={2.5}
                                 >
                                 <Typography
                                 component="span"
                                 sx={{
                                     fontSize: "2rem",
-                                    mr: "15px"
+                                    // mr: "15px"
                                 }}>
                                     y soy un 
                                 </Typography>
@@ -74,7 +74,7 @@ const Home = () => {
                                         textShadow: `0px 0px 0px ${mode ? secondary.main : primary.light},
                                         0px 0px 0px ${mode ? secondary.main : primary.light},
                                         0px 0px 10px ${mode ? secondary.main : primary.light}`,
-                                        fontSize: `2rem`,
+                                        fontSize: `2.2rem`,
                                         fontWeight:"bold"
                                     }}
                                 >
@@ -90,7 +90,7 @@ const Home = () => {
                             </Grid>
                             <Box
                                 display="flex"
-                                gap="10px"
+                                gap="15px"
                                 my="10px"
                             >
                             {
@@ -121,28 +121,27 @@ const Home = () => {
                                             xs: "25px",
                                             md: "15px"
                                         },
-                                        p: "1rem 2.8rem",
+                                        p: "1rem 2rem",
                                         width: {
                                             xs: "60%",
-                                            md: "34.5%",
+                                            md: "30%",
                                         },
                                         borderRadius:"4rem",
                                         boxShadow: `0 0 .8rem ${mode ? "cyan" : "#607d8b"}`,
-                                        transition: ".8s ease"
+                                        transition: ".8s ease",
                                     }}
                                     color={palette.mode !== 'dark'
                                     ? "primary" : "secondary"}
-                                    variant="contained">
-                                        <Link href="#portfolio">
+                                    variant="contained"
+                                    href="#portfolio">
                                     Ver portafolio
-                                        </Link>
+                                        
                                 </Button>
                         </Grid>
                         <Grid item xs={12} md={4}
-                        // spacing={2}
                         justifyContent="center"
                         alignItems="center"
-                        sx={{ display: "flex", mt: {xs:"20px",md: "0px"}}}>
+                        sx={{ display: "flex", mt: {xs:"50px",md: "0px"}}}>
                             <CardMedia image="/ibra.jpeg"
                                 component="img"
                                 alt=""
