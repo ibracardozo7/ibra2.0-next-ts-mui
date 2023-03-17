@@ -88,7 +88,7 @@ const Home = () => {
                                                 sx={{
                                                     border: `.15rem solid ${mode ? "cyan" : "#607d8b"}`,
                                                     p:"10px"}}
-                                                size="medium"
+                                                size="small"
                                                 color={mode ? "secondary" : "primary"}>
                                                 {elem.icon}
                                             </IconButton>
