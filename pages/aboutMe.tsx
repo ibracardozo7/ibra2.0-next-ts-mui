@@ -72,7 +72,7 @@ const AboutMe = () => {
                                     />
                                     </ListItemIcon>
                                     <Button 
-                                        href="/cv.pdf"
+                                        href="/ibracv.pdf"
                                         target="_blank"
                                         color={mode ? 'secondary' : 'primary'}
                                         size="large"
