@@ -61,6 +61,38 @@ interface Project {
 }
 
 export const myProjects: Project[] = [
+    // {
+    //     title: "",
+    //     description: "",
+    //     image: "",
+    //     lenguages: ["React.js", "Material UI", "@nivo.rock", "@fullCalendar"],
+    //     demo: "",
+    //     github: "",
+    // },
+    {
+        title: "MERN project - Movies App",
+        description: "Me encuentro Realizando una App de peliculas, inpirado en una plataforma de Series y Peliculas como Netflix",
+        image: "/mern.png",
+        lenguages: ["React.js", "Styled.Component", "TypeScrypt", "Node.js", "Express.js", "MongoDB"],
+        demo: "",
+        github: "",
+    },
+    {
+        title: "Sanva: bitácora de Salud",
+        description: "Proyecto que brinda mayor seguimiento de salud Personal. Participe como voluntario por 1 mes, Donde aporte mis conocimientos y habilidades en el Front End. Esta es nuetra primer version de nuestra plataforma web/mobil, más adelante vamos a añadir nuevos roles y funcionalidades. Trabajando en equipo para un Startups de Mexico",
+        image: "/sanva.png",
+        lenguages: ["React.js", "Tailwind CSS", "JavaScript", "Zustand"],
+        demo: "https://sanva-demo.netlify.app/user",
+        github: "https://github.com/ArrascaetaFedericoIgnacio/SANVA-Proyect",
+    },
+    {
+        title: "MERN project - Login / Register",
+        description: "Proyecto personal donde aplico mis conocimientos aprendidos y aplicando nueva tegnologia utilizando Mongo Atlas",
+        image: "/login.png",
+        lenguages: ["React.js", "SCSS", "JavaScript", "Node.js", "Express.js", "Mongoose"],
+        demo: "https://ibra-login-register.vercel.app/",
+        github: "https://github.com/ibracardozo7/login-register-MERN",
+    },
     {
         title: "Admin dashboard app",
         description: "Proximamente estará terminado un mini proyecto de un dashboard con sus determinadas funciones, Una app creado con libreria de componentes de visulizacion de datos y calendario.",
