@@ -1,4 +1,7 @@
 import {
+    Accordion,
+    AccordionDetails,
+    AccordionSummary,
     Box,
     Button,
     Container,
@@ -7,20 +10,28 @@ import {
     ListItem,
     ListItemIcon,
     ListItemText,
+    Typography,
     useMediaQuery,
     useTheme
 } from "@mui/material"
-import { ChevronRight, Description } from "@mui/icons-material";
+import { ChevronRight, Description, ExpandMore } from "@mui/icons-material";
 import Title from "../components/Title";
 import Skill from "../components/Skill";
-import { aboutMe, techs } from "../components/Consts"
+import { aboutMe, techs, techsBackEnd, techsDataBase, techsFrontEnd } from "../components/Consts"
 import Link from "next/link";
+import { useState } from "react";
 
 const AboutMe = () => {
 
+    const [expanded, setExpanded] = useState("")
     const { breakpoints, palette } = useTheme();
     const isMobile = useMediaQuery(breakpoints.down("md"));
     const mode = palette.mode === "dark"
+
+    const handleChange =
+    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(panel);
+    };
     
     return (
         <Box component="section" id="about"
@@ -119,6 +130,118 @@ const AboutMe = () => {
                             ))
                             }
                         </Grid>
+                        {/* Accordion off */}
+                        {/* <Grid
+                            container
+                            item
+                            xs={12}
+                        >
+                            <Accordion
+                                expanded={expanded === 'panel1'} onChange={handleChange('panel1')}
+                                sx={{
+                                    width: "100%"
+                                }}
+                            >
+                                <AccordionSummary
+                                    expandIcon={<ExpandMore />}
+                                    aria-controls="panel1bh-content"
+                                    id="panel1bh-header"
+                                >
+                                    <Typography>
+                                        Frontend Developer
+                                    </Typography>
+                                </AccordionSummary>
+                            {
+                                techsFrontEnd.map((elem) => (
+                                    <AccordionDetails
+                                        sx={{display: "flex"}}
+                                        key={elem.name}
+                                    >
+                                        {
+                                    isMobile
+                                    ? <Skill icon={elem.icon} name={elem.name} />
+                                    : <Link href={elem.url} target="_blank" rel="noreferrer">
+                                        <Skill icon={elem.icon} name={elem.name} />
+                                    </Link> 
+                                    }
+                                        <Typography>
+                                            {elem.name}
+                                        </Typography>
+                                    </AccordionDetails>
+                                    ))
+                                }
+                            </Accordion>
+                            <Accordion
+                                expanded={expanded === 'panel2'} onChange={handleChange('panel2')}
+                                sx={{
+                                    width: "100%"
+                                }}
+                            >
+                                <AccordionSummary
+                                    expandIcon={<ExpandMore />}
+                                    aria-controls="panel2bh-content"
+                                    id="panel2bh-header"
+                                >
+                                    <Typography>
+                                        Backend Developer
+                                    </Typography>
+                                </AccordionSummary>
+                            {
+                                techsBackEnd.map((elem) => (
+                                    <AccordionDetails
+                                        sx={{display: "flex"}}
+                                        key={elem.name}
+                                    >
+                                        {
+                                    isMobile
+                                    ? <Skill icon={elem.icon} name={elem.name} />
+                                    : <Link href={elem.url} target="_blank" rel="noreferrer">
+                                        <Skill icon={elem.icon} name={elem.name} />
+                                    </Link> 
+                                    }
+                                        <Typography>
+                                            {elem.name}
+                                        </Typography>
+                                    </AccordionDetails>
+                                    ))
+                                }
+                            </Accordion>
+                            <Accordion
+                                expanded={expanded === 'panel3'} onChange={handleChange('panel3')}
+                                sx={{
+                                    width: "100%"
+                                }}
+                            >
+                                <AccordionSummary
+                                    expandIcon={<ExpandMore />}
+                                    aria-controls="panel3bh-content"
+                                    id="panel3bh-header"
+                                >
+                                    <Typography>
+                                        DataBase
+                                    </Typography>
+                                </AccordionSummary>
+                            {
+                                techsDataBase.map((elem) => (
+                                    <AccordionDetails
+                                        sx={{display: "flex"}}
+                                        key={elem.name}
+                                    >
+                                        {
+                                    isMobile
+                                    ? <Skill icon={elem.icon} name={elem.name} />
+                                    : <Link href={elem.url} target="_blank" rel="noreferrer">
+                                        <Skill icon={elem.icon} name={elem.name} />
+                                    </Link> 
+                                    }
+                                        <Typography>
+                                            {elem.name}
+                                        </Typography>
+                                    </AccordionDetails>
+                                    ))
+                                }
+                            </Accordion>
+                        </Grid> */}
                     </Grid>
                 </Grid>
             </Container>

@@ -16,6 +16,11 @@ import {
     SiTypescript,
     SiExpress,
     SiSequelize,
+    SiSass,
+    SiStyledcomponents,
+    SiGit,
+    SiMongodb,
+    SiAngular,
 } from 'react-icons/si';
 import { FaLinkedinIn } from "react-icons/fa"
 
@@ -35,7 +40,7 @@ interface Tech {
     url: string;
 }
 
-export const techs: Tech[] = [
+export const techsFrontEnd: Tech[] = [
     { name: "HTML 5", icon: <SiHtml5 />, url: "https://developer.mozilla.org/es/docs/Web/HTML" },
     { name: "CSS 3", icon: <SiCss3 />, url: "https://developer.mozilla.org/es/docs/Web/CSS" },
     { name: "JavaScript", icon: <SiJavascript />, url: "https://developer.mozilla.org/es/docs/Web/JavaScript" },
@@ -45,10 +50,37 @@ export const techs: Tech[] = [
     { name: "TypeScript", icon: <SiTypescript />, url: "https://www.typescriptlang.org/" },
     { name: "Next js", icon: <SiNextdotjs />, url: "https://nextjs.org/" },
     { name: "Material UI", icon: <SiMaterialui />, url: "https://mui.com/" },
+]
+
+export const techsBackEnd: Tech[] = [
+    { name: "Node js", icon: <SiNodedotjs />, url: "https://nodejs.org/" },
+    { name: "Express js", icon: <SiExpress />, url: "https://expressjs.com/" },
+]
+
+export const techsDataBase: Tech[] = [
+    { name: "PostgreSQL", icon: <SiPostgresql />, url: "https://www.postgresql.org/" },
+    { name: "Sequelize", icon: <SiSequelize />, url: "https://sequelize.org/" },
+]
+
+export const techs: Tech[] = [
+    { name: "HTML 5", icon: <SiHtml5 />, url: "https://developer.mozilla.org/es/docs/Web/HTML" },
+    { name: "CSS 3", icon: <SiCss3 />, url: "https://developer.mozilla.org/es/docs/Web/CSS" },
+    { name: "JavaScript", icon: <SiJavascript />, url: "https://developer.mozilla.org/es/docs/Web/JavaScript" },
+    { name: "React js", icon: <SiReact />, url: "https://reactjs.org/" },
+    { name: "Next js", icon: <SiNextdotjs />, url: "https://nextjs.org/" },
+    { name: "Angular", icon: <SiAngular />, url: "https://angular.io/" },
+    { name: "TypeScript", icon: <SiTypescript />, url: "https://www.typescriptlang.org/" },
+    { name: "Redux js", icon: <SiRedux />, url: "https://redux.js.org/" },
+    { name: "Tailwind css", icon: <SiTailwindcss />, url: "https://tailwindcss.com/" },
+    { name: "Material UI", icon: <SiMaterialui />, url: "https://mui.com/" },
+    { name: 'SASS', icon: <SiSass />, url: 'https://sass-lang.com/' },
+    { name: 'Styled Components', icon: <SiStyledcomponents />, url: 'https://styled-components.com/' },
     { name: "Node js", icon: <SiNodedotjs />, url: "https://nodejs.org/" },
     { name: "Express js", icon: <SiExpress />, url: "https://expressjs.com/" },
     { name: "PostgreSQL", icon: <SiPostgresql />, url: "https://www.postgresql.org/" },
     { name: "Sequelize", icon: <SiSequelize />, url: "https://sequelize.org/" },
+    { name: 'MongoDB', icon: <SiMongodb />, url: 'https://www.mongodb.com/' },
+    { name: 'Git', icon: <SiGit />, url: 'https://git-scm.com/' },
 ]
 
 interface Project {
