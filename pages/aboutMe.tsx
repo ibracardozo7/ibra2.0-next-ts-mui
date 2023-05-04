@@ -95,7 +95,7 @@ const AboutMe = () => {
                                         }}
                                         endIcon={<Description />}>
                                         Descargar CV
-                                    </Button>
+                                    </Button>   
                                 </ListItem>
                             </List>
                         </Grid>
