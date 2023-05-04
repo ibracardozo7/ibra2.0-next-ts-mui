@@ -117,14 +117,14 @@ export const myProjects: Project[] = [
         demo: "https://sanva-demo.netlify.app/user",
         github: "https://github.com/ArrascaetaFedericoIgnacio/SANVA-Proyect",
     },
-    // {
-    //     title: "MERN project - Login / Register",
-    //     description: "Proyecto personal donde aplico mis conocimientos aprendidos y aplicando nueva tegnologia utilizando Mongo Atlas",
-    //     image: "/login.png",
-    //     lenguages: ["React.js", "SCSS", "JavaScript", "Node.js", "Express.js", "Mongoose"],
-    //     demo: "https://ibra-login-register.vercel.app/",
-    //     github: "https://github.com/ibracardozo7/login-register-MERN",
-    // },
+    {
+        title: "MERN project - Login / Register",
+        description: "Proyecto personal donde aplico mis conocimientos aprendidos y aplicando nueva tegnologia utilizando Mongo Atlas",
+        image: "/login.png",
+        lenguages: ["React.js", "SCSS", "JavaScript", "Node.js", "Express.js", "Mongoose"],
+        demo: "https://ibra-login-register.vercel.app/",
+        github: "https://github.com/ibracardozo7/login-register-MERN",
+    },
     {
         title: "Admin dashboard app",
         description: "Proximamente estará terminado un mini proyecto de un dashboard con sus determinadas funciones, Una app creado con libreria de componentes de visulizacion de datos y calendario.",
