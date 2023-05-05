@@ -83,7 +83,7 @@ const AboutMe = () => {
                                     />
                                     </ListItemIcon>
                                     <Button 
-                                        href="/ibracv.pdf"
+                                        href="/cv-XavierIbrahimCardozo-FullStack.pdf"
                                         target="_blank"
                                         color={mode ? 'secondary' : 'primary'}
                                         size="large"
