@@ -70,7 +70,7 @@ const NavBar = (props: NavProps) => {
         <AppBar
           elevation={0}
           sx={{
-            backgroundColor: mode ? "#191627" : "#d1c4e9",
+            backgroundColor: mode ? "#191627" : "#ede7f6",
             color: mode ? "#fff" : "#242329",
           }}
         >

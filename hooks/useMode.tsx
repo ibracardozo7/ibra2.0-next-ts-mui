@@ -22,7 +22,7 @@ const useMode = () => {
                 main: colorBar
             },
             background: {
-                default: mode ? "#191627" : "#d1c4e9"
+                default: mode ? "#191627" : "#ede7f6"
             }
         },
         breakpoints: {
