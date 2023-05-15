@@ -9,6 +9,7 @@ interface Project {
     title: string;
     demo: string;
     github: string;
+    row?: any
 }
 
 const Proyect = ({
@@ -18,6 +19,7 @@ const Proyect = ({
     title,
     demo,
     github,
+    row
 }: Project) => {
 
     const { palette } = useTheme();
@@ -34,9 +36,10 @@ const Proyect = ({
                 flexDirection: {
                     xs: "column",
                     sm: "",
-                    md: "column"
+                    md: row % 2 !== 1 ? "row" : "row-reverse"
                 },
-                backgroundColor: mode ? "#323946": "#f2f0f0",
+                backgroundColor: mode ? "#1f242d": "#ede7f6",
+                borderRadius: "20px"
             }}>
             <CardMedia
                 image={image}
@@ -45,8 +48,8 @@ const Proyect = ({
                 sx={{
                     width: {
                         xs: "100%",
-                        sm: "40%",
-                        md: "100%",
+                        sm: "50%",
+                        md: "45%",
                     },
                     objectFit: "cover",
                     zIndex: 2,
@@ -63,7 +66,8 @@ const Proyect = ({
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
-                    zIndex: 2
+                    zIndex: 2,
+                    padding: "15px 25px"
                 }}>
                 <Typography
                     variant="h5"
@@ -95,7 +99,7 @@ const Proyect = ({
                             }}>
                             <Chip
                             label={elem}
-                            color={palette.mode === "dark" ? "primary" : "secondary"}
+                            color={palette.mode !== "dark" ? "primary" : "secondary"}
                             size="small"
                             />
                         </Grid>)

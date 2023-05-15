@@ -9,20 +9,20 @@ const Footer = () => {
 
     return (
         <>
-            <GoTopButton />
+            {/* <GoTopButton /> */}
             <Box
                 component="footer"
                 sx={{
                     py: 5,
                     mt: 4,
-                    bgcolor: (color ? secondary.dark : primary.dark),
+                    // bgcolor: (color ? secondary.light : primary.light),
                 }}
             >
                 <Typography
                     variant="body1"
                     align="center"
-                    color={color
-                        ? "info"
+                    color={!color
+                        ? primary.main
                         : primary.contrastText}
                     sx={{ fontWeight: 700 }}
                 >

@@ -16,24 +16,27 @@ const Skill = ({ icon, name }: Props) => {
         minHeight: "5rem",
         fontSize: "3rem",
         position: "relative",
+        display: "flex",
         color: mode ? secondary.contrastText : primary.contrastText,
         background: `linear-gradient(90deg, ${mode ? secondary.dark : primary.dark} 0%, ${mode ? secondary.main : primary.main} 100%)`,
         border: "none",
         borderRadius: "100px",
-        boxShadow: `0px 0px 24px ${mode ? secondary.dark : primary.dark}`,
+        boxShadow: `0px 0px 18px ${mode ? secondary.dark : primary.dark}`,
         transition: "all 0.2s ease-in-out 0s",
         outline: "none",
-        padding: "10px",
+        // padding: "12px",
+        justifyContent: "center",
+        alignItems: "center",
         zIndex: 3,
-        "&:hover": {
-            color: !mode ? secondary.contrastText : primary.contrastText,
-            transform: "translateY(-6px)",
-            background: `linear-gradient(90deg, ${!mode ? secondary.dark : primary.dark} 0%, ${!mode ? secondary.main : primary.main} 100%)`,
-            boxShadow: `0px 0px 24px ${!mode ? secondary.dark : primary.dark}`,
-            "p": {
-                color: "red"
-            }
-        },
+        // "&:hover": {
+        //     color: !mode ? secondary.contrastText : primary.contrastText,
+        //     transform: "translateY(-6px)",
+        //     background: `linear-gradient(90deg, ${!mode ? secondary.dark : primary.dark} 0%, ${!mode ? secondary.main : primary.main} 100%)`,
+        //     boxShadow: `0px 0px 24px ${!mode ? secondary.dark : primary.dark}`,
+        //     "p": {
+        //         color: "red"
+        //     }
+        // },
         "svg": {
             zIndex: 2
         },

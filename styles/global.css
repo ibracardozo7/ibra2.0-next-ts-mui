@@ -1,3 +1,7 @@
+*, body {
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+}
 /* html,
 body {
   padding: 0;
@@ -12,10 +16,10 @@ body {
   box-sizing: border-box;
 } */
 
-a {
+/* a {
   color: #fff;
   text-decoration: none;
-}
+} */
 
 /* a:hover {
   text-decoration: underline;

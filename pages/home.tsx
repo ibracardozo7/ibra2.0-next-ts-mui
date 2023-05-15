@@ -17,6 +17,7 @@ const Home = () => {
                 sx={{
                     minHeight: "100vh",
                     display: "flex",
+                    fontFamily: "Poppins"
                     // border: "1px solid black"
                 }}
                 maxWidth="md">
@@ -37,7 +38,7 @@ const Home = () => {
                             // justifyContent: "center"
                         }}>
                             <Title
-                            size={2.1}
+                            size={2}
                             title={[
                                 "Hola! Mi nombre es ",
                                 "Xavier Ibrahim Cardozo",
@@ -51,13 +52,14 @@ const Home = () => {
                             >
                                 <Grid item
                                     xs={12}
-                                    md={2.5}
+                                    md={2.8}
                                 >
                                 <Typography
                                 component="span"
                                 sx={{
                                     fontSize: "2rem",
                                     // mr: "15px"
+                                    fontFamily: "Poppins"
                                 }}>
                                     y soy un 
                                 </Typography>
@@ -74,7 +76,7 @@ const Home = () => {
                                         textShadow: `0px 0px 0px ${mode ? secondary.main : primary.light},
                                         0px 0px 0px ${mode ? secondary.main : primary.light},
                                         0px 0px 10px ${mode ? secondary.main : primary.light}`,
-                                        fontSize: `2.2rem`,
+                                        fontSize: `2rem`,
                                         fontWeight:"bold"
                                     }}
                                 >
@@ -103,7 +105,7 @@ const Home = () => {
                                             title={elem.name}>
                                             <IconButton
                                                 sx={{
-                                                    border: `.15rem solid ${mode ? "cyan" : "#607d8b"}`,
+                                                    border: `.15rem solid ${mode ? "cyan" : "#f1f1f1"}`,
                                                     p:"10px"}}
                                                 size="small"
                                                 color={mode ? "secondary" : "primary"}>
@@ -124,7 +126,7 @@ const Home = () => {
                                         p: "1rem 2rem",
                                         width: {
                                             xs: "60%",
-                                            md: "30%",
+                                            md: "32%",
                                         },
                                         borderRadius:"4rem",
                                         boxShadow: `0 0 .8rem ${mode ? "cyan" : "#607d8b"}`,
@@ -138,7 +140,7 @@ const Home = () => {
                                         
                                 </Button>
                         </Grid>
-                        <Grid item xs={12} md={4}
+                        <Grid item xs={12} md={3.5}
                         justifyContent="center"
                         alignItems="center"
                         sx={{ display: "flex", mt: {xs:"50px",md: "0px"}}}>
@@ -154,7 +156,7 @@ const Home = () => {
                                     objectFit: "cover",
                                     zIndex: 2,
                                     borderRadius: "50%",
-                                    border: `2px solid ${mode ? "cyan" : "#607d8b"}`,
+                                    // border: `2px solid ${mode ? "cyan" : "#673ab7"}`,
                                     boxShadow: `0px 0px 50px 2px ${mode ? secondary.dark : primary.dark}`,
                                 }} />
                         </Grid>

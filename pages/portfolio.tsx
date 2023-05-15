@@ -31,15 +31,17 @@ const Portfolio = () => {
                         container
                         item
                         xs={12}
+                        md={12}
                         spacing={8}
+                        justifyContent="center"
                         >
                         {
-                        myProjects.map(elem => (
+                        myProjects.map((elem, i) => (
                             <Grid
                                 key={elem.title}
                                 item
                                 xs={12}
-                                md={6}
+                                md={10}
                                 >
                                 <Proyect
                                 description={elem.description}
@@ -48,6 +50,7 @@ const Portfolio = () => {
                                 title={elem.title}
                                 demo={elem.demo}
                                 github={elem.github}
+                                row={i}
                                 />
                             </Grid>
                         ))
