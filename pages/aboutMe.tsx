@@ -126,7 +126,7 @@ const AboutMe = () => {
                     >
                       <Box sx={{ width: "100px" }}>
                         <Typography textAlign="center" fontWeight="700">
-                          13+
+                          9+
                         </Typography>
                         <Typography textAlign="center">
                           Meses de Experiencia
