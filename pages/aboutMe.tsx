@@ -179,7 +179,7 @@ const AboutMe = () => {
                       sx={{
                         p: ".6rem 2rem",
                         borderRadius: "4rem",
-                        boxShadow: `0 0 .8rem ${mode ? "cyan" : "#607d8b"}`,
+                        boxShadow: `0 0 .8rem ${mode ? "#673ab7" : "#607d8b"}`,
                         transition: ".8s ease",
                       }}
                       endIcon={<Description />}

@@ -6,7 +6,6 @@ import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { CacheProvider, EmotionCache } from "@emotion/react"
 import createEmotionCache from "../src/createEmotionCache"
-import Footer from "../components/Layout/Footer"
 import NavBar from "../components/Layout/Navbar"
 import Particles from "../components/Particles"
 import useMode from "../hooks/useMode"
@@ -34,10 +33,9 @@ const App = (props: MyAppProps) => {
     {/* body */}
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {/* <Particles /> */}
+      <Particles />
       <NavBar toggleMode={toggleMode} mode={mode} />
       <Component {...pageProps} />
-      {/* <Footer /> */}
     </ThemeProvider>
     </CacheProvider>
   ) 

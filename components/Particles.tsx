@@ -57,10 +57,10 @@ const Particle = () => {
                 // },
                 particles: {
                     color: {
-                        value: color ? secondary.main : primary.main,
+                        value: color ? "#673ab7" : primary.main,
                     },
                     links: {
-                        color: color ? secondary.main : primary.main,
+                        color: color ? "#7e57c2" : primary.main,
                         distance: 150,
                         enable: true,
                         opacity: 0.5,
@@ -84,7 +84,7 @@ const Particle = () => {
                             enable: true,
                             area: 800,
                         },
-                        value: 80,
+                        value: 30,
                     },
                     opacity: {
                         value: 0.5,

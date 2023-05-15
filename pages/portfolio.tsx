@@ -41,7 +41,7 @@ const Portfolio = () => {
                                 key={elem.title}
                                 item
                                 xs={12}
-                                md={10}
+                                md={11}
                                 >
                                 <Proyect
                                 description={elem.description}

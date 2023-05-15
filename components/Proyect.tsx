@@ -24,11 +24,9 @@ const Proyect = ({
 
     const { palette } = useTheme();
     const mode = palette.mode === "dark"
-    // const cardDirection = direction ? "row"
 
     return (
         <Card
-            
             sx={{
                 display: "flex",
                 height: "100%",
@@ -38,7 +36,7 @@ const Proyect = ({
                     sm: "",
                     md: row % 2 !== 1 ? "row" : "row-reverse"
                 },
-                backgroundColor: mode ? "#1f242d": "#ede7f6",
+                backgroundColor: mode ? "#191627" : "#d5cae9",
                 borderRadius: "20px"
             }}>
             <CardMedia
@@ -49,8 +47,9 @@ const Proyect = ({
                     width: {
                         xs: "100%",
                         sm: "50%",
-                        md: "45%",
+                        md: "50%",
                     },
+                    // height: "100%",
                     objectFit: "cover",
                     zIndex: 2,
                 }}
@@ -60,18 +59,19 @@ const Proyect = ({
                     width: {
                         xs: "100%",
                         sm: "60%",
-                        md: "100%",
+                        md: "50%",
                     },
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
                     zIndex: 2,
-                    padding: "15px 25px"
+                    padding: "25px 30px"
                 }}>
                 <Typography
                     variant="h5"
                     gutterBottom
+                    sx={{fontWeight: "600"}}
                     color={palette.mode !== "dark" ? "primary" : "secondary"}>
                     {title}
                 </Typography>
@@ -80,7 +80,7 @@ const Proyect = ({
                     gutterBottom>
                     {description}
                 </Typography>
-                <Grid container spacing={1}>
+                <Grid container spacing={1} sx={{paddingTop: "8px"}}>
                     <Grid
                     container
                     item
@@ -101,6 +101,7 @@ const Proyect = ({
                             label={elem}
                             color={palette.mode !== "dark" ? "primary" : "secondary"}
                             size="small"
+                            sx={{padding: "15px 10px"}}
                             />
                         </Grid>)
                         }
@@ -129,7 +130,7 @@ const Proyect = ({
                                 target="_blank"
                                 fullWidth
                                 color={palette.mode !== "dark" ? "primary" : "secondary"}
-                                variant="outlined"
+                                variant="contained"
                                 startIcon={<Visibility />}>
                                 Demo
                             </Button>

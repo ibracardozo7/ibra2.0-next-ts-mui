@@ -28,15 +28,12 @@ const Skill = ({ icon, name }: Props) => {
         justifyContent: "center",
         alignItems: "center",
         zIndex: 3,
-        // "&:hover": {
-        //     color: !mode ? secondary.contrastText : primary.contrastText,
-        //     transform: "translateY(-6px)",
-        //     background: `linear-gradient(90deg, ${!mode ? secondary.dark : primary.dark} 0%, ${!mode ? secondary.main : primary.main} 100%)`,
-        //     boxShadow: `0px 0px 24px ${!mode ? secondary.dark : primary.dark}`,
-        //     "p": {
-        //         color: "red"
-        //     }
-        // },
+        "&:hover": {
+            color: !mode ? secondary.contrastText : primary.contrastText,
+            transform: "translateY(-8px)",
+            background: `linear-gradient(90deg, ${!mode ? secondary.dark : primary.dark} 0%, ${!mode ? secondary.main : primary.main} 100%)`,
+            boxShadow: `0px 0px 24px ${!mode ? secondary.dark : primary.dark}`,
+        },
         "svg": {
             zIndex: 2
         },

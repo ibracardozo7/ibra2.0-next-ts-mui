@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import { networks, networks2 } from "../components/Consts";
 import Title from "../components/Title";
+import zIndex from "@mui/material/styles/zIndex";
 
 const ContactMe = () => {
   const { palette } = useTheme();
@@ -32,7 +33,7 @@ const ContactMe = () => {
           </Grid>
           <Grid item>
             <Card 
-            sx={{ backgroundColor: mode ? "#1f242d" : "#f1f1f1" }}
+            sx={{ backgroundColor: mode ? "#191627" : "#d1c4e9" }}
             >
               <CardContent>
                 <Typography sx={{color: mode ? "#fff" : "#000000", fontWeight: "700", fontSize: "18px"}} textAlign="center">Ponerse en contacto</Typography>
@@ -43,7 +44,8 @@ const ContactMe = () => {
                   flexDirection: "column",
                   margin: "0",
                   gap: "10px",
-                  paddingBottom: "18px"
+                  paddingBottom: "18px",
+                  zIndex: 3
                   // justifyContent: "center",
                   // alignItems: "center",
                 }}

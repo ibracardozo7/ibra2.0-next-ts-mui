@@ -70,7 +70,7 @@ const NavBar = (props: NavProps) => {
         <AppBar
           elevation={0}
           sx={{
-            backgroundColor: mode ? "#191627" : "#f1f1f1",
+            backgroundColor: mode ? "#191627" : "#d1c4e9",
             color: mode ? "#fff" : "#242329",
           }}
         >
@@ -119,7 +119,9 @@ const NavBar = (props: NavProps) => {
                       <Link href={elem.link} key={elem.name}>
                         <Button
                           variant="text"
-                          color={mode ? "secondary" : "primary"}
+                          sx={{color: mode ? "#f2f1f3" : "primary",
+                            // fontSize: "16px"
+                        }}
                         >
                           {elem.name}
                         </Button>
