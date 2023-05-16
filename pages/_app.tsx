@@ -22,13 +22,13 @@ const App = (props: MyAppProps) => {
   return (
     <CacheProvider value={emotionCache}>
     <Head>
-      <title>Xavier Ibrahim Cardozo | Full Stack Web Developer</title>
+      <title>Ibra Cardozo | Full Stack Web Developer</title>
       <meta name="viewport" content="initial-scale=1, width=device-width" />
       <meta name="theme-color" content={mode ? theme.palette.secondary.main : theme.palette.primary.main} />
       <meta content="Un Full Stack Developer apasionado por la programación y en busca de nuevos retos" name="description" />
       <meta content="portfolio" name="keywords" />
       <meta content="Xavier Ibra Cardozo" name="author" />
-      <link href="/i.png" rel="icon" />
+      <link href="/i2.png" rel="icon" />
     </Head>
     {/* body */}
     <ThemeProvider theme={theme}>
