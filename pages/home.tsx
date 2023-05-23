@@ -31,7 +31,11 @@ const Home = () => {
         }}
         maxWidth="md"
       >
-        <Grid container>
+        <Grid container
+          gap={{
+            md: 3
+          }}
+        >
           {
               isMobile && (
             <Grid
@@ -187,7 +191,7 @@ const Home = () => {
                 width: {
                   xs: "65%",
                   sm: "50%",
-                  md: "90%",
+                  md: "100%",
                 },
                 objectFit: "cover",
                 zIndex: 2,
