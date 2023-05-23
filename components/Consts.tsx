@@ -168,7 +168,7 @@ export const myProjects: Project[] = [
   {
     title: "MERN project - Movies App",
     description:
-      "Me encuentro Realizando una App de peliculas, inpirado en una plataforma de Series y Peliculas como Netflix",
+    "Me encuentro Realizando una App de peliculas, inpirado en una plataforma de Series y Peliculas como Netflix",
     image: "/mern.png",
     lenguages: [
       "React.js",
@@ -182,9 +182,17 @@ export const myProjects: Project[] = [
     github: "",
   },
   {
+      title: "Pokedex App",
+      description: "Proyecto personal, donde aplico mis conocimientos y habilidades, Se trata de una app donde consumó una Api de Pokemones, con filtro de acuerdo al tipo de pokemon.",
+      image: "/pokedex.png",
+      lenguages: ["React.js", "TypeScript", "SCSS", "PokeApi"],
+      demo: "https://pokedex-ibracardozo.vercel.app/",
+      github: "https://github.com/ibracardozo7/pokedex-react-ts-scss",
+  },
+  {
     title: "Sanva: bitácora de Salud",
     description:
-      "Proyecto que brinda mayor seguimiento de salud Personal. Participe como voluntario por 1 mes, Donde aporte mis conocimientos y habilidades en el Front End. Esta es nuestra primer versión de nuestra plataforma web/móvil, más adelante vamos a añadir nuevos roles y funcionalidades. Trabajando en equipo para un Startups de México.",
+      "Proyecto que brinda mayor seguimiento de salud Personal. Participe como voluntario por 1 mes, Donde aporte mis conocimientos y habilidades en el Front End. Esta es nuestra primera versión de nuestra plataforma web/móvil, más adelante vamos a añadir nuevos roles y funcionalidades. Trabajando en equipo para un Startups de México.",
     image: "/sanva.png",
     lenguages: ["React.js", "Tailwind CSS", "JavaScript", "Zustand"],
     demo: "https://sanva-demo.netlify.app/user",

@@ -32,6 +32,37 @@ const Home = () => {
         maxWidth="md"
       >
         <Grid container>
+          {
+              isMobile && (
+            <Grid
+              item
+              xs={12}
+              md={3.5}
+              justifyContent="center"
+              alignItems="center"
+              sx={{ display: "flex", mt: { xs: "90px", md: "0px" } }}
+            >
+              <CardMedia
+                image="/ibra.jpeg"
+                component="img"
+                alt=""
+                sx={{
+                  width: {
+                    xs: "65%",
+                    sm: "50%",
+                    md: "90%",
+                  },
+                  objectFit: "cover",
+                  zIndex: 2,
+                  borderRadius: "50%",
+                  boxShadow: `0px 0px 50px 10px ${
+                    mode ? secondary.dark : primary.dark
+                  }`,
+                }}
+              />
+            </Grid>
+            )
+          }
           <Grid
             item
             xs={12}
@@ -41,7 +72,7 @@ const Home = () => {
               flexDirection: "column",
               justifyContent: "center",
               marginTop: {
-                xs: "75px",
+                xs: "25px",
                 md: "0px",
               },
               // py: 20,
@@ -138,6 +169,8 @@ const Home = () => {
               Ver portafolio
             </Button>
           </Grid>
+          {
+            !isMobile && (
           <Grid
             item
             xs={12}
@@ -152,8 +185,8 @@ const Home = () => {
               alt=""
               sx={{
                 width: {
-                  xs: "80%",
-                  sm: "40%",
+                  xs: "65%",
+                  sm: "50%",
                   md: "90%",
                 },
                 objectFit: "cover",
@@ -165,6 +198,8 @@ const Home = () => {
               }}
             />
           </Grid>
+            )
+          }
         </Grid>
       </Container>
     </Box>

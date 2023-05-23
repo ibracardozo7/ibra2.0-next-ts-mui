@@ -4,12 +4,11 @@ import { cyan, deepPurple } from '@mui/material/colors';
 
 const useMode = () => {
 
-    const cyan = deepPurple
     const [mode, setMode] = useState(false)
     const toggleMode = () => setMode(!mode)
-    const colorBar = mode ? cyan[500] : deepPurple[500]
+    const colorBar = mode ? deepPurple[500] : deepPurple[500]
     const colorInput = mode ? deepPurple[900] : deepPurple[50]
-    const colorBarHover = mode ? cyan[700] : deepPurple[700]
+    const colorBarHover = mode ? deepPurple[700] : deepPurple[700]
     const theme = createTheme({
         palette: {
             mode: mode ? 'dark' : 'light',
