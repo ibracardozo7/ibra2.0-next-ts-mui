@@ -7,7 +7,6 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { CacheProvider, EmotionCache } from "@emotion/react"
 import createEmotionCache from "../src/createEmotionCache"
 import NavBar from "../components/Layout/Navbar"
-import Particles from "../components/Particles"
 import useMode from "../hooks/useMode"
 
 const clientSideEmotionCache = createEmotionCache();
@@ -33,7 +32,6 @@ const App = (props: MyAppProps) => {
     {/* body */}
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Particles />
       <NavBar toggleMode={toggleMode} mode={mode} />
       <Component {...pageProps} />
     </ThemeProvider>
