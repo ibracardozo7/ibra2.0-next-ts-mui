@@ -2,6 +2,7 @@ import { Box, Container, Grid, useTheme } from "@mui/material"
 import { myProjects } from "../components/Consts"
 import Proyect from "../components/Proyect"
 import Title from "../components/Title"
+import SubTitle from "../components/SubTitle"
 
 const Portfolio = () => {
 
@@ -22,10 +23,11 @@ const Portfolio = () => {
                 <Grid
                     container
                     direction="column"
-                    spacing={5}
+                    spacing={6}
                     >
                     <Grid item xs={12}>
                         <Title title="Portafolio" size={2.5} />
+                        <SubTitle title="trabajo mas reciente" />
                     </Grid>
                     <Grid
                         container

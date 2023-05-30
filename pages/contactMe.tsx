@@ -13,6 +13,7 @@ import {
 import { networks, networks2 } from "../components/Consts";
 import Title from "../components/Title";
 import zIndex from "@mui/material/styles/zIndex";
+import SubTitle from "../components/SubTitle";
 
 const ContactMe = () => {
   const { palette } = useTheme();
@@ -29,23 +30,20 @@ const ContactMe = () => {
       <Container maxWidth="sm">
         <Grid container direction="column" spacing={4}>
           <Grid item>
-            <Title title="Contactame!" size={2.5} />
+            <Title title="Contáctame!" size={2.5} />
+            <SubTitle title="Ponerse en contacto" />
           </Grid>
           <Grid item>
-            <Card 
-            sx={{ backgroundColor: mode ? "#191627" : "#d1c4e9" }}
-            >
-              <CardContent>
-                <Typography sx={{color: mode ? "#fff" : "#000000", fontWeight: "700", fontSize: "18px"}} textAlign="center">Ponerse en contacto</Typography>
-              </CardContent>
-              <CardActions
+            <Box>
+              <Box
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  margin: "0",
+                  // margin: "0",
                   gap: "10px",
                   paddingBottom: "18px",
-                  zIndex: 3
+                  zIndex: 3,
+                  margin: "1rem 0rem .5rem 0rem",
                   // justifyContent: "center",
                   // alignItems: "center",
                 }}
@@ -59,11 +57,11 @@ const ContactMe = () => {
                       title={elem.name}
                       sx={{
                         display: "flex",
-                        width: "300px",
-                        // justifyContent: "start",
+                        width: "100%",
+                        // justifyContent: "flex-start",
                         // alignItems: "center",
                         textDecoration: "none",
-                        gap: "10px"
+                        gap: "10px",
                       }}
                       // style={{nth}}
                     >
@@ -93,8 +91,8 @@ const ContactMe = () => {
                     </Link>
                   );
                 })}
-              </CardActions>
-            </Card>
+              </Box>
+            </Box>
           </Grid>
         </Grid>
       </Container>

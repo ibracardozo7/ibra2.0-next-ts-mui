@@ -32,6 +32,7 @@ import { useState } from "react";
 import { FiCode } from "react-icons/fi";
 import { HiOutlineDatabase } from "react-icons/hi";
 import { BsFillHddNetworkFill } from "react-icons/bs";
+import SubTitle from "../components/SubTitle";
 
 const AboutMe = () => {
   const [expanded, setExpanded] = useState<string | false>(false);
@@ -64,6 +65,7 @@ const AboutMe = () => {
           <Grid container item spacing={4} justifyContent="center">
             <Grid item xs={12} md={12} alignItems="center">
               <Title title="Acerca de mi" size={2.5} />
+              <SubTitle title="Mi introducción" />
             </Grid>
             <Grid
               container
@@ -72,6 +74,7 @@ const AboutMe = () => {
               md={9}
               spacing={2}
               justifyContent="center"
+              sx={{marginTop: ".3rem"}}
             >
               <Grid
                 item
@@ -99,22 +102,15 @@ const AboutMe = () => {
                   {aboutMe.map((elem) => {
                     return (
                       <ListItem key={elem}>
-                        <ListItemIcon>
-                          <ChevronRight
-                            color={!mode ? "primary" : "secondary"}
-                          />
-                        </ListItemIcon>
-                        <ListItemText primary={elem} />
+                        <ListItemText sx={{marginLeft: "50px"}} primary={elem} />
                       </ListItem>
                     );
                   })}
                   {/*  */}
                   <ListItem>
-                    <ListItemIcon>
-                      <ChevronRight color={!mode ? "primary" : "secondary"} />
-                    </ListItemIcon>
                     <Box
                       sx={{
+                        marginLeft: "50px",
                         display: "flex",
                         justifyContent: {
                           xs: "space-between",
@@ -153,9 +149,6 @@ const AboutMe = () => {
                     </Box>
                   </ListItem>
                   <ListItem sx={{ display: !isMobile ? "none" : "" }}>
-                    <ListItemIcon>
-                      <ChevronRight color={!mode ? "primary" : "secondary"} />
-                    </ListItemIcon>
                     <Box sx={{ width: "100%" }}>
                       <Typography textAlign="center" fontWeight="700">
                         Buscando
@@ -166,10 +159,7 @@ const AboutMe = () => {
                     </Box>
                   </ListItem>
                   {/*  */}
-                  <ListItem sx={{ marginTop: "10px" }}>
-                    <ListItemIcon>
-                      <ChevronRight color={!mode ? "primary" : "secondary"} />
-                    </ListItemIcon>
+                  <ListItem sx={{ marginLeft: "50px", marginTop: "10px" }}>
                     <Button
                       href="/XavierIbrahimCardozo-FullStack-CV.pdf"
                       target="_blank"
@@ -178,7 +168,7 @@ const AboutMe = () => {
                       variant="contained"
                       sx={{
                         p: ".6rem 2rem",
-                        borderRadius: "4rem",
+                        borderRadius: ".7rem",
                         boxShadow: `0 0 .8rem ${mode ? "#673ab7" : "#607d8b"}`,
                         transition: ".8s ease",
                       }}
@@ -195,6 +185,7 @@ const AboutMe = () => {
           <Grid container item spacing={4} justifyContent="center">
             <Grid item xs={12} md={12} alignItems="center">
               <Title title="Habilidades" size={2.5} />
+              <SubTitle title="mi nivel tecnico" />
             </Grid>
             <Grid
               container
@@ -203,6 +194,7 @@ const AboutMe = () => {
               md={7}
               spacing={3}
               justifyContent="center"
+              sx={{marginTop: ".8rem"}}
             >
               {techs.map((elem) => (
                 <Grid key={elem.name} item>

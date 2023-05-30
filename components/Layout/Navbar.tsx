@@ -74,12 +74,16 @@ const NavBar = (props: NavProps) => {
             color: mode ? "#fff" : "#242329",
           }}
         >
-          <Container maxWidth="lg">
+          <Container 
+            sx={{margin: "0px 0px 0px 2rem"}}
+          >
             <Toolbar
               disableGutters
-              sx={{ display: "flex", justifyContent: "space-between" }}
+              sx={{ width: "968px", display: "flex", justifyContent: "space-between" }}
             >
-              <Box sx={{width: {md: "100px"}}}>
+              <Box 
+                // sx={{width: {md: "100px"}}}
+              >
                 <Typography
                   sx={{
                     display: "flex",
@@ -147,7 +151,7 @@ const NavBar = (props: NavProps) => {
                   </>
                 )}
               </Box>
-              <Box sx={{display: isMobile ? "none" : ""}}></Box>
+              {/* <Box sx={{display: isMobile ? "none" : ""}}></Box> */}
             </Toolbar>
           </Container>
         </AppBar>
