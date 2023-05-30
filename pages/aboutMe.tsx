@@ -62,7 +62,7 @@ const AboutMe = () => {
           spacing={10}
         >
           {/* about Me */}
-          <Grid container item spacing={4} justifyContent="center">
+          <Grid container item spacing={5} justifyContent="center">
             <Grid item xs={12} md={12} alignItems="center">
               <Title title="Acerca de mi" size={2.5} />
               <SubTitle title="Mi introducción" />
@@ -194,7 +194,7 @@ const AboutMe = () => {
               md={7}
               spacing={3}
               justifyContent="center"
-              sx={{marginTop: ".8rem"}}
+              sx={{marginTop: "1rem"}}
             >
               {techs.map((elem) => (
                 <Grid key={elem.name} item>

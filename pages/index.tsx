@@ -3,6 +3,7 @@ import About from "./aboutMe";
 import Portfolio from "./portfolio";
 import ContactMe from "./contactMe";
 import ButtonScroll from "../components/ButtonScroll";
+import Services from "./services";
 
 const Index = () => {  
 
@@ -10,6 +11,7 @@ const Index = () => {
     <>
       <Home />
       <About />
+      <Services />
       <Portfolio />
       <ContactMe />
       <ButtonScroll />

@@ -25,6 +25,9 @@ import {
 import { SlLocationPin } from "react-icons/sl"
 import { FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi"
+import { FiCode } from "react-icons/fi";
+import { HiOutlineDatabase } from "react-icons/hi";
+import { BsFillHddNetworkFill } from "react-icons/bs";
 
 export const aboutMe: string[] = [
 //   "Desarrollador Full Stack ubicado en Jujuy - Argentina.",
@@ -146,6 +149,21 @@ export const techs: Tech[] = [
   { name: "MongoDB", icon: <SiMongodb />, url: "https://www.mongodb.com/" },
   { name: "Git", icon: <SiGit />, url: "https://git-scm.com/" },
 ];
+
+export const services = [
+  {
+    icon: <FiCode />,
+    title: "Desarrollador front-end",
+  },
+  {
+    icon: <BsFillHddNetworkFill />,
+    title: "Desarrollador back-end",
+  },
+  {
+    icon: <HiOutlineDatabase />,
+    title: "Desarrollador de base de datos",
+  }
+]
 
 interface Project {
   title: string;
