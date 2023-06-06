@@ -200,6 +200,14 @@ export const myProjects: Project[] = [
     github: "",
   },
   {
+      title: "Login-Dashboard",
+      description: "Proyecto personal, Donde Aplico mis conocimientos Aprendido del curso de FrontEnd con Angular sobre lazy loading, Formulario Reactivo, Rutas protegidas dependiendo el logeo correcto, etc.",
+      image: "/login-angular.png",
+      lenguages: ["Angular", "Typescript", "Material Angular", "SCSS"],
+      demo: "https://login-angular-ibracardozo.vercel.app/",
+      github: "https://github.com/ibracardozo7/login-angular",
+  },
+  {
       title: "Pokedex App",
       description: "Proyecto personal, donde aplico mis conocimientos y habilidades, Se trata de una app donde consumó una Api de Pokemones, con filtro de acuerdo al tipo de pokemon.",
       image: "/pokedex.png",
