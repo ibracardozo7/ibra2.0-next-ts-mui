@@ -81,7 +81,11 @@ const NavBar = (props: NavProps) => {
           > */}
             <Toolbar
               disableGutters
-              sx={{ width: "50%", marginLeft: "2.5rem", display: "flex", justifyContent: "space-between" }}
+              sx={{ width: {
+                xs: "100%",
+                // sm: "100%",
+                md:"50%"
+              }, marginLeft: "2.5rem", marginRight: "1.5rem", display: "flex", justifyContent: "space-between" }}
             >
               <Box 
                 // sx={{width: {md: "100px"}}}
