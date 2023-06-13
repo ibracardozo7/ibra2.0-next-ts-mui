@@ -101,21 +101,17 @@ const AboutMe = () => {
                 <List disablePadding>
                   {aboutMe.map((elem) => {
                     return (
-                      <ListItem key={elem}>
-                        <ListItemText sx={{marginLeft: "50px"}} primary={elem} />
+                      <ListItem key={elem} sx={{width: "100%"}}>
+                        <ListItemText sx={{marginLeft: "5px"}} primary={elem} />
                       </ListItem>
                     );
                   })}
-                  {/*  */}
                   <ListItem>
                     <Box
                       sx={{
-                        marginLeft: "50px",
+                        // marginLeft: "50px",
                         display: "flex",
-                        justifyContent: {
-                          xs: "space-between",
-                          md: "space-around",
-                        },
+                        justifyContent: "space-around",
                         alignItems: "center",
                         width: "100%",
                       }}
@@ -148,7 +144,7 @@ const AboutMe = () => {
                       </Box>
                     </Box>
                   </ListItem>
-                  <ListItem sx={{ display: !isMobile ? "none" : "" }}>
+                  <ListItem sx={{ display: !isMobile ? "none" : "", marginTop: "10px" }}>
                     <Box sx={{ width: "100%" }}>
                       <Typography textAlign="center" fontWeight="700">
                         Buscando
@@ -158,8 +154,7 @@ const AboutMe = () => {
                       </Typography>
                     </Box>
                   </ListItem>
-                  {/*  */}
-                  <ListItem sx={{ marginLeft: "50px", marginTop: "10px" }}>
+                  <ListItem sx={{ marginLeft: "0px", marginTop: "15px", display: "flex", justifyContent: "center" }}>
                     <Button
                       href="/XavierIbrahimCardozo-FullStack-CV.pdf"
                       target="_blank"
@@ -182,7 +177,7 @@ const AboutMe = () => {
             </Grid>
           </Grid>
           {/* Skill */}
-          <Grid container item spacing={4} justifyContent="center">
+          {/* <Grid container item spacing={4} justifyContent="center">
             <Grid item xs={12} md={12} alignItems="center">
               <Title title="Habilidades" size={2.5} />
               <SubTitle title="mi nivel tecnico" />
@@ -208,245 +203,7 @@ const AboutMe = () => {
                 </Grid>
               ))}
             </Grid>
-            {/* Accordion off */}
-            {/* <Grid
-              container
-              item
-              xs={12}
-              md={12}
-              spacing={2}
-              justifyContent="center"
-            >
-              <Grid item xs={12} md={4.5}>
-                <Accordion
-                  expanded={expanded === "panel1"}
-                  onChange={handleChange("panel1")}
-                  sx={{ backgroundColor: mode ? "#323946" : "#f2f0f0" }}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMore />}
-                    aria-controls="panel1bh-content"
-                    id="panel2bh-header"
-                    sx={{
-                      height: "48px",
-                    }}
-                  >
-                    <IconButton
-                      color={mode ? "secondary" : "primary"}
-                      sx={{ marginRight: "5px" }}
-                    >
-                      <FiCode />
-                    </IconButton>
-                    <Typography
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    >
-                      Frontend Developer
-                    </Typography>
-                  </AccordionSummary>
-                  {techsFrontEnd.map((elem) => (
-                    <AccordionDetails
-                      sx={{
-                        display: "flex",
-                        justifyContent: "space-around",
-                        alignItems: "center",
-                      }}
-                      key={elem.name}
-                    >
-                      {isMobile ? (
-                        <Skill icon={elem.icon} name={elem.name} />
-                      ) : (
-                        <Link href={elem.url} target="_blank" rel="noreferrer">
-                          <Skill icon={elem.icon} name={elem.name} />
-                        </Link>
-                      )}
-                      <Box>
-                        <Box
-                          sx={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                          }}
-                        >
-                          <Typography>{elem.name}</Typography>
-                          <Typography color={mode ? "#fff" : "#242329"}>
-                            % {elem.progress}
-                          </Typography>
-                        </Box>
-                        <LinearProgress
-                          sx={{
-                            height: "6.5px",
-                            width: {
-                              xs: "200px",
-                              lg: "250px",
-                            },
-                            margin: "5px 0px 5px 0px",
-                          }}
-                          color={mode ? "secondary" : "primary"}
-                          variant="determinate"
-                          value={elem.progress}
-                        ></LinearProgress>
-                      </Box>
-                    </AccordionDetails>
-                  ))}
-                </Accordion>
-              </Grid>
-
-              <Grid item xs={12} md={4.5}>
-                <Accordion
-                  expanded={expanded === "panel2"}
-                  onChange={handleChange("panel2")}
-                  sx={{ backgroundColor: mode ? "#323946" : "#f2f0f0" }}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMore />}
-                    aria-controls="panel2bh-content"
-                    id="panel2bh-header"
-                    sx={{
-                      height: "48px",
-                    }}
-                  >
-                    <IconButton
-                      color={mode ? "secondary" : "primary"}
-                      sx={{ marginRight: "5px" }}
-                    >
-                      <BsFillHddNetworkFill />
-                    </IconButton>
-                    <Typography
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    >
-                      Backend Developer
-                    </Typography>
-                  </AccordionSummary>
-                  {techsBackEnd.map((elem) => (
-                    <AccordionDetails
-                      sx={{
-                        display: "flex",
-                        justifyContent: "space-around",
-                        alignItems: "center",
-                      }}
-                      key={elem.name}
-                    >
-                      {isMobile ? (
-                        <Skill icon={elem.icon} name={elem.name} />
-                      ) : (
-                        <Link href={elem.url} target="_blank" rel="noreferrer">
-                          <Skill icon={elem.icon} name={elem.name} />
-                        </Link>
-                      )}
-                      <Box>
-                        <Box
-                          sx={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                          }}
-                        >
-                          <Typography>{elem.name}</Typography>
-                          <Typography color={mode ? "#fff" : "#242329"}>
-                            % {elem.progress}
-                          </Typography>
-                        </Box>
-                        <LinearProgress
-                          sx={{
-                            height: "6.5px",
-                            width: {
-                              xs: "200px",
-                              lg: "250px",
-                            },
-                            margin: "5px 0px 5px 0px",
-                          }}
-                          color={mode ? "secondary" : "primary"}
-                          variant="determinate"
-                          value={elem.progress}
-                        ></LinearProgress>
-                      </Box>
-                    </AccordionDetails>
-                  ))}
-                </Accordion>
-              </Grid>
-
-              <Grid item xs={12} md={4.5}></Grid>
-              <Grid item xs={12} md={4.5}>
-                <Accordion
-                  expanded={expanded === "panel3"}
-                  onChange={handleChange("panel3")}
-                  sx={{ backgroundColor: mode ? "#323946" : "#f2f0f0" }}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMore />}
-                    aria-controls="panel3bh-content"
-                    id="panel3bh-header"
-                    sx={{
-                      height: "48px",
-                    }}
-                  >
-                    <IconButton
-                      color={mode ? "secondary" : "primary"}
-                      sx={{ marginRight: "5px" }}
-                    >
-                      <HiOutlineDatabase />
-                    </IconButton>
-                    <Typography
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    >
-                      Database
-                    </Typography>
-                  </AccordionSummary>
-                  {techsDataBase.map((elem) => (
-                    <AccordionDetails
-                      sx={{
-                        display: "flex",
-                        justifyContent: "space-around",
-                        alignItems: "center",
-                      }}
-                      key={elem.name}
-                    >
-                      {isMobile ? (
-                        <Skill icon={elem.icon} name={elem.name} />
-                      ) : (
-                        <Link href={elem.url} target="_blank" rel="noreferrer">
-                          <Skill icon={elem.icon} name={elem.name} />
-                        </Link>
-                      )}
-                      <Box>
-                        <Box
-                          sx={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                          }}
-                        >
-                          <Typography>{elem.name}</Typography>
-                          <Typography color={mode ? "#fff" : "#242329"}>
-                            % {elem.progress}
-                          </Typography>
-                        </Box>
-                        <LinearProgress
-                          sx={{
-                            height: "6.5px",
-                            width: {
-                              xs: "200px",
-                              lg: "250px",
-                            },
-                            margin: "5px 0px 5px 0px",
-                          }}
-                          color={mode ? "secondary" : "primary"}
-                          variant="determinate"
-                          value={elem.progress}
-                        ></LinearProgress>
-                      </Box>
-                    </AccordionDetails>
-                  ))}
-                </Accordion>
-              </Grid> */}
-            {/* </Grid> */}
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </Box>

@@ -84,7 +84,7 @@ const Home = () => {
             }}
           >
             <Title
-              size={2}
+              size={1.9}
               title={[
                 "Hola! Mi nombre es ",
                 "Xavier Ibrahim Cardozo",
@@ -97,7 +97,7 @@ const Home = () => {
                 <Typography
                   component="span"
                   sx={{
-                    fontSize: "2rem",
+                    fontSize: "1.9rem",
                     // mr: "15px"
                     fontFamily: "Poppins",
                   }}
